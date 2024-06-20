@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nodejsdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejsdocker
+  template:
+    metadata:
+      labels:
+        app: nodejsdocker 
+    spec:
+      containers:
+        - name: nodejsdocker 
+          image: akhanacr.azurecr.io/nodejsdocker
+          ports:
+          - containerPort: 8080
