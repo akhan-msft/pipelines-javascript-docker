@@ -56,7 +56,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'akhanmsftpipelinesjavascriptdocker.apps'
+    environment: 'aksdev.apps'
     strategy:
       runOnce:
         deploy:
@@ -86,7 +86,7 @@ stages:
     pool:
       vmImage: $(vmImageName)
 
-    environment: 'akhanmsftpipelinesjavascriptdocker.$(k8sNamespaceForPR)'
+    environment: 'aksdev.$(k8sNamespaceForPR)'
     strategy:
       runOnce:
         deploy:
